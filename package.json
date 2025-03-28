@@ -1,0 +1,25 @@
+{
+  "name": "hausaufgabe-25-03-28",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomskeFhain/Hausaufgabe-25-03-28.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DomskeFhain/Hausaufgabe-25-03-28/issues"
+  },
+  "homepage": "https://github.com/DomskeFhain/Hausaufgabe-25-03-28#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
