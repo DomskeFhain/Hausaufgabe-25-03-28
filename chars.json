@@ -1,11 +1,12 @@
-[{
+[
+  {
     "id": 1,
     "class": "Warrior",
-    "name": "DamagerD",
-},
-{
+    "name": "DamagerD"
+  },
+  {
     "id": 2,
-    "class": "Sura",
-    "name": "DomskiiD",
-}
+    "charClass": "Sura",
+    "name": "DomskiiD"
+  }
 ]

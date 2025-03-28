@@ -9,27 +9,29 @@ function readFile() {
     return JSON.parse(data);
 }
 function writeFile(data) {
-    fs.writeFileSync('chars.json', JSON.stringify(data, null, 2));  // JSON.stringify converts Java object to JSON format
+    fs.writeFileSync("chars.json", JSON.stringify(data, null, 2));  // JSON.stringify converts Java object to JSON format
 }
 app.get("/chars", (req, res) => {
-    res.json(readFile());
+    const chars = readFile(); // read from file
+    res.json(chars);
 });
 app.post("/chars", (req, res) => {
     const chars = readFile(); // read from file
     const { charClass, name } = req.body;
-   if(name && art){
+   if(name && charClass){
         const newChar = {
-            id: tiere.length + 1,
+            id: chars.length + 1,
             charClass: charClass,
             name: name
         }
+        chars.push(newChar)
+        writeFile(chars); // write to file
+        res.json(201).json(newChar);
     }
     else{
         res.send("Data incomplete")
     }
-    chars.push(newChar)
-    writeFile(chars); // write to file
-    res.json(201).json(newChar);
+
 });
 app.put("/chars/:id", (req, res) => {
     const id = req.params.id;
