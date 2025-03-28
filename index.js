@@ -10,9 +10,11 @@ function readFile() {
 function writeFile(data) {
     fs.writeFileSync("chars.json", JSON.stringify(data, null, 2));  // JSON.stringify converts Java object to JSON format
 }
+
 app.get("/chars", (req, res) => {
     const chars = readFile(); // read from file
     res.json(chars);
+
 });
 app.post("/chars", (req, res) => {
     const chars = readFile(); // read from file
@@ -49,7 +51,8 @@ app.delete("/chars/:id", (req, res) => {
     writeFile(chars); // write to file
     res.json("Deleted " + deletedChar[0].name)
 });
-app.get("/chars/query", (req, res) => {
+app.get("/query", (req, res) => {
+    const chars = readFile();
     res.send(req.query);
 });
 app.listen(9000, () => {

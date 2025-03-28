@@ -8,5 +8,25 @@
     "id": 2,
     "charClass": "Sura",
     "name": "DomskiiD"
+  },
+  {
+    "id": 3,
+    "charClass": "Sura",
+    "name": "DomskeD"
+  },
+  {
+    "id": 4,
+    "charClass": "Ninja",
+    "name": "DomskeeD"
+  },
+  {
+    "id": 5,
+    "charClass": "Sura",
+    "name": "KillerD"
+  },
+  {
+    "id" : 6,
+    "charClass": "Sura",
+    "name": "DomskiD"
   }
 ]
