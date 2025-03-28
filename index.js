@@ -49,6 +49,9 @@ app.delete("/chars/:id", (req, res) => {
     writeFile(chars); // write to file
     res.json("Deleted " + deletedChar[0].name)
 });
+app.get("/chars/query", (req, res) => {
+    res.send(req.query);
+});
 app.listen(9000, () => {
     console.log("Server läuft auf http://localhost:9000/chars")
 }); 
