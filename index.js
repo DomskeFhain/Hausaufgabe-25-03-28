@@ -1,6 +1,5 @@
 const express = require('express'); // import express
 const app = express(); // as an app
-const port = 9000; // set port
 const fs = require('fs'); // import fs
 app.use(express.json()); // Middleware to write in body
 // Helpfunction
